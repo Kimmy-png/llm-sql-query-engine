@@ -1,0 +1,7 @@
+streamlit
+transformers
+torch
+accelerate
+bitsandbytes
+SQLAlchemy
+pandas
