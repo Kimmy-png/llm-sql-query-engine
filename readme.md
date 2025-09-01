@@ -1,30 +1,33 @@
 # Text-to-SQL
 
-This application allows you to interact with a database using natural language.
+This application transforms the way you interact with your data. Simply upload your own dataset (CSV/Excel), ask questions in natural language, and get instant SQL queries and results.
 
-It's a user-friendly web interface that leverages a powerful, quantized large language model (HuggingFaceH4/zephyr-7b-beta) to:
+It's a user-friendly web interface that leverages a powerful yet efficient large language model (microsoft/Phi-3-mini-4k-instruct) to:
 
-- Translate your questions into executable SQL queries.
+- Allow users to upload one or more custom datasets.
 
-- Run the queries against a database.
+- Translate natural language questions into executable SQL queries.
 
-- Display the results instantly.
+- Run the queries against the user-provided data.
 
-The entire backend, including the database and the AI model, runs on the server where the app is hosted (either locally or on Streamlit Community Cloud).
+- Display the results instantly in a clean interface.
+
+The entire backend, including the in-memory database and the AI model, runs on the server where the app is hosted.
 
 
 # Features
 
+- Custom Data Upload: Bring your own data! Upload CSV or Excel files, and the app will automatically create a database schema.
 
-Natural Language Queries: Ask questions in plain English instead of writing complex SQL.
+- Natural Language Queries: Ask questions in plain English instead of writing complex SQL.
 
-- AI-Powered: Uses a state-of-the-art 7B parameter model for high accuracy.
+- AI-Powered: Uses Microsoft's state-of-the-art Phi-3-mini model for high accuracy and efficienc
 
-- Efficient: The model is quantized to 4-bit precision, allowing it to run efficiently.
+- Efficient: The model is quantized to 4-bit precision, making it suitable for deployment on free-tier servers like Hugging Face Spaces.
 
-- Interactive UI: Built with Streamlit for a clean and simple user experience.
+- Interactive UI: Built with Streamlit for a clean, simple, and responsive user experience.
 
-- Schema Display: Users can view the database schema to understand the available data.
+- Schema Display: Users can view the database schema of their uploaded files to understand the available data.
 
 
 # How to Run Locally
@@ -51,4 +54,4 @@ Note: The first time you run the app, it will download the AI model from Hugging
 
 # Deployment
 
-You can easily deploy this application to the web for free using Streamlit Community Cloud.Upload the app.py, requirements.txt, and README.md files to a new GitHub repository.Sign in to Streamlit Community Cloud with your GitHub account.Click "New app" and select the repository you just created.Click "Deploy!"
+Due to memory requirements, it is highly recommended to deploy this application to Hugging Face Spaces, which offers a generous free tier.
